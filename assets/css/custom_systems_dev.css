@@ -427,9 +427,16 @@ body {
   
     #hero .hero-img img {
       width: 30%;
+      height: 100%;
     }
   }
 
+  @media (max-width: 575px) {
+    #hero .hero-img img {
+        width: 80%;
+        height: 100%;
+    }
+  } 
 
 /* Process Code Below */
 
