@@ -375,6 +375,14 @@ hr.style-one {
     margin-top: 70px;
     margin-bottom: 20%;
   }
+
+
+@media (max-width: 768px) {
+#hero .hero-img img {
+    width: 50%;
+    height: 100%;
+}
+}
   
   #hero .hero-row-padding {
     padding-top: 2%;
