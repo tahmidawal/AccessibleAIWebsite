@@ -375,6 +375,14 @@ hr.style-one {
     margin-top: 70px;
     margin-bottom: 20%;
   }
+
+
+@media (max-width: 768px) {
+#hero .hero-img img {
+    width: 50%;
+    height: 100%;
+}
+}
   
   #hero .hero-row-padding {
     padding-top: 2%;
@@ -463,6 +471,7 @@ hr.style-one {
       font-size: 18px;
       line-height: 24px;
       margin-bottom: 30px;
+      text-align: left;
     }
   
     #hero .hero-img img {
@@ -474,6 +483,7 @@ hr.style-one {
   @media (max-width: 575px) {
     #hero .hero-img img {
       width: 80%;
+      height: 100%;
     }
   }
   
@@ -544,10 +554,17 @@ hr.style-one {
 #autoML-HIW {
   position: relative;
   top: -50px;
-  left: 20px;
+  /* left: 20px; */
   text-align: left;
   width: 65%;
   margin: 0 auto; /* Optional: for centering the element */
+}
+
+@media (max-width: 575px) {
+  #autoML-HIW {
+    width: 85%;
+  }
+
 }
 
 #autoML-HIW .main_description {
@@ -615,7 +632,21 @@ hr.style-one {
   height: 100%; /* Make sure the .use-cases takes the full height of its container */
 }
 
-#use-cases .use-cases-main_description {
+@media (max-width: 575px) {
+  #use-cases {
+    width: 85%;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #use-cases p {
+    width: 100%;
+  }
+}
+
+#use-cases .use-cases-main-description {
   width: 85%;
 }
 

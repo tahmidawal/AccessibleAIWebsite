@@ -405,6 +405,14 @@ body {
   #hero .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
   }
+
+  @media (max-width: 575px) {
+    #hero .hero-img img {
+        width: 80%;
+        height: 100%; 
+        
+    }
+  } 
   
   @media (min-width: 1024px) {
     #hero {
@@ -426,9 +434,11 @@ body {
     }
   
     #hero .hero-img img {
-      width: 30%;
+      /* width: 30%; */
+      height: 100%;
     }
   }
+
 
 
 /* Process Code Below */
@@ -450,17 +460,10 @@ body {
       margin-bottom: 30px;
     }
   
-    #hero .hero-img img {
-      width: 50%;
-      height: 30%;
-    }
+
   }
   
-  @media (max-width: 575px) {
-    #hero .hero-img img {
-      width: 80%;
-    }
-  }
+
   
   @keyframes up-down {
     0% {
@@ -880,9 +883,10 @@ body {
 
 #why-custom-AI {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 95%;
   margin-bottom: 5%;
   margin-top: 5%;
 }
@@ -927,7 +931,7 @@ body {
 @media (min-width: 992px) {
   #why-custom-AI .why-custom-AI-content {
     text-align: left;
-    width: 80%;
+    width: 100%;
     max-width: 1500px;
     /* background-color: red; */
     text-wrap: wrap;
@@ -937,8 +941,21 @@ body {
 }
 
 
+.why-custom-AI-content {
+  
+  justify-content: center;
+}
+
+.why-custom-ai-p-div {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+
 #why-custom-AI .why-custom-AI-content p {
   width: 100%;
+
 }
 
 
@@ -1251,14 +1268,18 @@ body {
   color: #222222;
 }
 
-.section-title h2::before,
-.section-title h2::after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background: #3498db;
-  display: inline-block;
+@media (min-width: 992px) {
+  .section-title h2::before,
+  .section-title h2::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #3498db;
+    display: inline-block;
+  }
 }
+
+
 
 .section-title h3 {
   font-size: 14px;

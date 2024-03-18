@@ -82,7 +82,7 @@ h6 {
   z-index: 997;
   transition: all 0.5s;
   padding: 22px 0;
-  background: #fff;
+  /* background: #3498db; */
 }
 
 #header.header-scrolled {
@@ -109,6 +109,7 @@ h6 {
   padding: 0;
   margin: 0;
   max-height: 40px;
+  border-radius: 1px;
 }
 
 /*--------------------------------------------------------------
@@ -364,7 +365,7 @@ h6 {
   padding-bottom: 10%;
 }
 
-
+#hero
 
 #hero h1 {
   margin: 0 0 10px 0;
@@ -490,6 +491,7 @@ section {
   color: #222222;
 }
 
+
 .section-title h2::before,
 .section-title h2::after {
   content: "";
@@ -498,6 +500,16 @@ section {
   background: #3498db;
   display: inline-block;
 }
+
+
+@media (max-width: 575px) {
+  .section-title h2::before,
+  .section-title h2::after {
+    width: 5px;
+  }
+}
+
+
 
 .section-title h2::before {
   margin: 0 15px 10px 0;
@@ -549,17 +561,40 @@ section {
   .clients img {
     width: 30%;
   }
+
+
 }
 
-#sefg_logo {
-  height: 50%; /* Default to 65% for larger screens */
-  width: 100%;
+@media (max-width: 575px) {
+  #floyds_logo, #dexit_logo {
+      height: 100% !important;
+      width: 50% !important;
+  }
+
+  #sefg_logo { 
+    height: 75%;
+    width: 100%;
+  }
+
+  #forest_logo {
+    height: 100%;
+    width: 80%;
+  }
 }
 
-#forest_logo {
-  width: 85%;
-  height: 75%;
+@media (min-width: 575px) {
+  #sefg_logo, #forest_logo {
+    height: 50%; /* Default to 65% for larger screens */
+    width: 100%;
+  }
+
+  #forest_logo {
+    width: 85%;
+    height: 75%;
+  }
+
 }
+
 
 
 
