@@ -477,6 +477,7 @@ body {
   @media (max-width: 575px) {
     #hero .hero-img img {
       width: 80%;
+      height: 100%;
     }
   }
   
@@ -505,6 +506,18 @@ body {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+    /* Styles for iPads regardless of orientation */
+    #services .icon-box-div {
+      width: 40%;
+    }
+}
+
+
+
+
 .services .icon-box {
     padding: 30px;
     position: relative;
@@ -515,6 +528,8 @@ body {
     border-radius: 8px;
     z-index: 1;
   }
+
+
   
   .services .icon-box::before {
     content: "";
@@ -1227,14 +1242,17 @@ body {
   color: #222222;
 }
 
-.section-title h2::before,
-.section-title h2::after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background: #3498db;
-  display: inline-block;
+@media (min-width: 992px){
+  .section-title h2::before,
+  .section-title h2::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #3498db;
+    display: inline-block;
+  }
 }
+
 
 .section-title h3 {
   font-size: 14px;

@@ -583,7 +583,7 @@ section {
 }
 
 @media (min-width: 575px) {
-  #sefg_logo, #forest_logo, {
+  #sefg_logo, #forest_logo {
     height: 50%; /* Default to 65% for larger screens */
     width: 100%;
   }
