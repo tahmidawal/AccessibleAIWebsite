@@ -510,7 +510,7 @@ section {
 @media (max-width: 575px) {
   .section-title h2::before,
   .section-title h2::after {
-    width: 5px;
+    width: 0px;
   }
 }
 
