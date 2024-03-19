@@ -1,0 +1,71 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+
+
+h4 {
+    font-weight: bold;
+}
+
+.employee-bio {
+    background-color: #3498db;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    
+}
+
+
+img {
+    max-height: 400px;
+    padding: 1rem;
+    box-shadow: inset 0 0 0 1px white;
+    border: none
+}
+
+h1::before {
+    margin: 0 15px 10px 0;
+}
+h1::after {
+    margin: 0 0 10px 15px;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #3498db;
+  display: inline-block;
+}
+
+
+
+@media (max-width: 575px){
+    .employee-bio {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: #3498db;
+        color: white;
+        border-radius: 0;
+    }
+
+    .employee-bio h4 {
+        margin-top: 1.5rem;
+    }
+
+    img {
+        max-height: 200px;
+        padding: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}

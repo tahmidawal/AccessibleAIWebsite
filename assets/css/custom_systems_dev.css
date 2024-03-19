@@ -614,6 +614,7 @@ body {
   width: 100%;
   margin-bottom: 5%;
   margin-top: 5%;
+  
 }
 
 #how-we-do-it .how-we-do-it-title-section {
@@ -850,6 +851,14 @@ body {
   }
   #how-we-do-it .customization-steps-container ul li:nth-child(odd) .date {
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+}
+
+@media (min-width: 575px) {
+  #how-we-do-it {
+    width: 95%;
+    display: flex;
+    
   }
 }
 
