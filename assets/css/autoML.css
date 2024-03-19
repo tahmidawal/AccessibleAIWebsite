@@ -33,6 +33,39 @@ body {
     font-family: "Raleway", sans-serif;
   }
 
+  .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    color: #222222;
+  }
+
+  @media (min-width: 992px) {
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      width: 50px;
+      height: 2px;
+      background: #3498db;
+      display: inline-block;
+    }
+  }
+
+  .section-title::before {
+    margin: 0 15px 10px 0;
+  }
+  
+  .section-title::after {
+    margin: 0 0 10px 15px;
+  }
+  
+  .section-title p {
+    margin: 15px 0 0 0;
+  }
+
+
+
 
 
   /* HR Divide Line */
@@ -98,7 +131,10 @@ hr.style-one {
     z-index: 997;
     transition: all 0.5s;
     padding: 22px 0;
-    background: #fff;
+    background-color: white;
+    border-bottom: gray 1px solid;
+    /* Add a shadow to the bottom of the header */
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
   }
   
   #header.header-scrolled {
@@ -111,7 +147,7 @@ hr.style-one {
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 1px;
   }
   
@@ -125,6 +161,7 @@ hr.style-one {
     padding: 0;
     margin: 0;
     max-height: 40px;
+    border-radius: 1px;
   }
   
   /*--------------------------------------------------------------
@@ -284,7 +321,7 @@ hr.style-one {
   .navbar-mobile {
     position: fixed;
     overflow: hidden;
-    
+  
     top: 0;
     right: 0;
     left: 0;
@@ -627,7 +664,7 @@ hr.style-one {
   align-items: center; /* This centers the content vertically */
   justify-content: center; /* This will center the content horizontally */
   padding: 25px;
-  width: 75%; /* Set the width to 65% */
+  width: 80%; /* Set the width to 65% */
   margin: auto; /* This will center the #use-cases block horizontally in the parent */
   height: 100%; /* Make sure the .use-cases takes the full height of its container */
 }
@@ -647,7 +684,7 @@ hr.style-one {
 }
 
 #use-cases .use-cases-main-description {
-  width: 85%;
+  width: 100%;
 }
 
 #use-cases h2 {

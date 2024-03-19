@@ -1511,6 +1511,8 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
+
 .contact .contact-about h3 {
   font-size: 28px;
   margin: 0 0 10px 0;
@@ -1573,7 +1575,7 @@ section {
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: white;
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -1640,6 +1642,22 @@ section {
 .contact .php-email-form button[type=submit]:hover {
   background: #2383c4;
 }
+
+#contact-options-section {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+#contact
+
+.contact-info-item {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+}
+
 
 @keyframes animate-loading {
   0% {

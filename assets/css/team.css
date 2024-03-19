@@ -1,3 +1,8 @@
+body {
+    padding-top: 5rem;
+}
+
+
 h1,
 h2,
 h3,
@@ -7,6 +12,16 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.px-3 {
+    padding-left: 3rem !important;
+}
+
+@media (max-width: 575px) {
+    .px-3 {
+        padding-left: 1rem !important;
+    }
+    
+}
 
 
 h4 {

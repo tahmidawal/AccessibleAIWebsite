@@ -88,7 +88,10 @@ body {
     z-index: 997;
     transition: all 0.5s;
     padding: 22px 0;
-    background: #fff;
+    background-color: white;
+    border-bottom: gray 1px solid;
+    /* Add a shadow to the bottom of the header */
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
   }
   
   #header.header-scrolled {
@@ -101,7 +104,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 1px;
   }
   
@@ -115,6 +118,7 @@ body {
     padding: 0;
     margin: 0;
     max-height: 40px;
+    border-radius: 1px;
   }
   
   /*--------------------------------------------------------------
@@ -123,11 +127,6 @@ body {
   /**
   * Desktop Navigation 
   */
-
-.nav-bar-section-background {
-    background-color: #3498db;
-}
-
   .navbar {
     padding: 0;
   }
@@ -279,7 +278,7 @@ body {
   .navbar-mobile {
     position: fixed;
     overflow: hidden;
-    
+  
     top: 0;
     right: 0;
     left: 0;
@@ -587,7 +586,7 @@ body {
     margin-bottom: 0;
   }
   
-  .services .icon-box:hover .title a,
+  .services .icon-box:hover .title,
   .services .icon-box:hover .description {
     color: #fff;
   }
