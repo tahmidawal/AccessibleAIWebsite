@@ -100,7 +100,7 @@
             <div class="col-md-9 mb40">
                 <article>
                     <div class="post-content">
-                        <p class="lead">
+                        <p class="lead" data-aos="fade-in" data-aos-delay="50">
                             <br>
                             <span style="font-weight: bold;">At a Glance
                             </span>
@@ -267,15 +267,15 @@
                                                         },
                                                     })
                                                     .then(response => response
-                                                .json()) // First, convert the response to JSON
+                                                        .json()) // First, convert the response to JSON
                                                     .then(data => {
                                                         loadingDiv.style.display =
-                                                        'none'; // Hide loading message
+                                                            'none'; // Hide loading message
                                                         if (data.ok) {
                                                             sentMessageDiv.style.display =
-                                                            'block'; // Show success message
+                                                                'block'; // Show success message
                                                             form
-                                                        .reset(); // Optionally, reset form fields
+                                                                .reset(); // Optionally, reset form fields
                                                         } else {
                                                             // Handle any specific cases or errors if needed
                                                             errorMessageDiv.textContent =

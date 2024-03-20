@@ -29,8 +29,7 @@
 
     <!-- Process Links Below -->
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+
 
     <meta charset="UTF-8">
     <title>AutoML</title>
@@ -384,12 +383,12 @@
                                     },
                                 })
                                 .then(response => response
-                            .json()) // First, convert the response to JSON
+                                    .json()) // First, convert the response to JSON
                                 .then(data => {
                                     loadingDiv.style.display = 'none'; // Hide loading message
                                     if (data.ok) {
                                         sentMessageDiv.style.display =
-                                        'block'; // Show success message
+                                            'block'; // Show success message
                                         form.reset(); // Optionally, reset form fields
                                     } else {
                                         // Handle any specific cases or errors if needed

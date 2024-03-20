@@ -633,10 +633,10 @@
     </section><!-- End F.A.Q Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact mt-5" style="margin-bottom: 1rem;">
         <div class="container">
 
-            <div class="section-title" data-aos="fade-in">
+            <div class="section-title mb-5" data-aos="fade-in">
                 <h2>Contact Us</h2>
             </div>
 
@@ -729,12 +729,12 @@
                                     },
                                 })
                                 .then(response => response
-                            .json()) // First, convert the response to JSON
+                                    .json()) // First, convert the response to JSON
                                 .then(data => {
                                     loadingDiv.style.display = 'none'; // Hide loading message
                                     if (data.ok) {
                                         sentMessageDiv.style.display =
-                                        'block'; // Show success message
+                                            'block'; // Show success message
                                         form.reset(); // Optionally, reset form fields
                                     } else {
                                         // Handle any specific cases or errors if needed
