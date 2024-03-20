@@ -124,284 +124,285 @@ hr.style-one {
     }
   }
   
-  /*--------------------------------------------------------------
-  # Header
-  --------------------------------------------------------------*/
-  #header {
-    z-index: 997;
-    transition: all 0.5s;
-    padding: 22px 0;
-    background-color: white;
-    border-bottom: gray 1px solid;
-    /* Add a shadow to the bottom of the header */
-    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  #header.header-scrolled {
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    padding: 12px 0;
-  }
-  
-  #header .logo h1 {
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-  
-  #header .logo h1 a,
-  #header .logo h1 a:hover {
-    color: #222222;
-    text-decoration: none;
-  }
-  
-  #header .logo img {
-    padding: 0;
-    margin: 0;
-    max-height: 40px;
-    border-radius: 1px;
-  }
-  
-  /*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/
-  /**
-  * Desktop Navigation 
-  */
-  .navbar {
-    padding: 0;
-  }
-  
-  .navbar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  
-  .navbar li {
-    position: relative;
-  }
-  
-  .navbar a,
-  .navbar a:focus {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0 10px 30px;
-    font-size: 15px;
-    font-weight: 400;
-    color: #555555;
-    white-space: nowrap;
-    transition: 0.3s;
-  }
-  
-  .navbar a i,
-  .navbar a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-  }
-  
-  .navbar a:hover,
-  .navbar .active,
-  .navbar .active:focus,
-  .navbar li:hover>a {
-    color: #3498db;
-  }
-  
-  .navbar .getstarted,
-  .navbar .getstarted:focus {
-    background: #3498db;
-    padding: 8px 25px;
-    margin-left: 30px;
-    border-radius: 50px;
-    color: #fff;
-  }
-  
-  .navbar .getstarted:hover,
-  .navbar .getstarted:focus:hover {
-    color: #fff;
-    background: #4aa3df;
-  }
-  
-  .navbar .dropdown ul {
-    display: block;
-    position: absolute;
-    left: 30px;
-    top: calc(100% + 30px);
-    margin: 0;
-    padding: 10px 0;
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    transition: 0.3s;
-    border-radius: 4px;
-  }
-  
-  .navbar .dropdown ul li {
-    min-width: 200px;
-  }
-  
-  .navbar .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  
-  .navbar .dropdown ul a i {
-    font-size: 12px;
-  }
-  
-  .navbar .dropdown ul a:hover,
-  .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover>a {
-    color: #3498db;
-  }
-  
-  .navbar .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-  
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 22px 0;
+  background-color: white;
+  border-bottom: gray 1px solid;
+  /* Add a shadow to the bottom of the header */
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
+}
+
+#header.header-scrolled {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+}
+
+#header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #222222;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+  border-radius: 1px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #555555;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #3498db;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  background: #3498db;
+  padding: 8px 25px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+  background: #4aa3df;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #3498db;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
-    top: 0;
-    left: calc(100% - 30px);
-    visibility: hidden;
+    left: -90%;
   }
-  
+
   .navbar .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: 100%;
-    visibility: visible;
+    left: -100%;
   }
-  
-  @media (max-width: 1366px) {
-    .navbar .dropdown .dropdown ul {
-      left: -90%;
-    }
-  
-    .navbar .dropdown .dropdown:hover>ul {
-      left: -100%;
-    }
-  }
-  
-  /**
-  * Mobile Navigation 
-  */
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #222222;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
   .mobile-nav-toggle {
-    color: #222222;
-    font-size: 28px;
-    cursor: pointer;
-    display: none;
-    line-height: 0;
-    transition: 0.5s;
-  }
-  
-  .mobile-nav-toggle.bi-x {
-    color: #fff;
-  }
-  
-  @media (max-width: 991px) {
-    .mobile-nav-toggle {
-      display: block;
-    }
-  
-    .navbar ul {
-      display: none;
-    }
-  }
-  
-  .navbar-mobile {
-    position: fixed;
-    overflow: hidden;
-  
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(9, 9, 9, 0.9);
-    transition: 0.3s;
-    z-index: 999;
-  }
-  
-  .navbar-mobile .mobile-nav-toggle {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-  
-  .navbar-mobile ul {
-    display: block;
-    position: absolute;
-    top: 55px;
-    right: 15px;
-    bottom: 15px;
-    left: 15px;
-    padding: 10px 0;
-    border-radius: 8px;
-    background-color: #fff;
-    overflow-y: auto;
-    transition: 0.3s;
-  }
-  
-  .navbar-mobile a,
-  .navbar-mobile a:focus {
-    padding: 10px 20px;
-    font-size: 15px;
-    color: #222222;
-  }
-  
-  .navbar-mobile a:hover,
-  .navbar-mobile .active,
-  .navbar-mobile li:hover>a {
-    color: #3498db;
-  }
-  
-  .navbar-mobile .getstarted,
-  .navbar-mobile .getstarted:focus {
-    margin: 15px;
-  }
-  
-  .navbar-mobile .dropdown ul {
-    position: static;
-    display: none;
-    margin: 10px 20px;
-    padding: 10px 0;
-    z-index: 99;
-    opacity: 1;
-    visibility: visible;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  }
-  
-  .navbar-mobile .dropdown ul li {
-    min-width: 200px;
-  }
-  
-  .navbar-mobile .dropdown ul a {
-    padding: 10px 20px;
-  }
-  
-  .navbar-mobile .dropdown ul a i {
-    font-size: 12px;
-  }
-  
-  .navbar-mobile .dropdown ul a:hover,
-  .navbar-mobile .dropdown ul .active:hover,
-  .navbar-mobile .dropdown ul li:hover>a {
-    color: #3498db;
-  }
-  
-  .navbar-mobile .dropdown>.dropdown-active {
     display: block;
   }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(9, 9, 9, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #222222;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #3498db;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #3498db;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+
   
   /*--------------------------------------------------------------
   # Hero Section
@@ -661,12 +662,15 @@ hr.style-one {
 #use-cases {
   display: flex;
   flex-direction: column;
-  align-items: center; /* This centers the content vertically */
-  justify-content: center; /* This will center the content horizontally */
+  align-items: center; 
+  justify-content: center; 
   padding: 25px;
-  width: 80%; /* Set the width to 65% */
-  margin: auto; /* This will center the #use-cases block horizontally in the parent */
-  height: 100%; /* Make sure the .use-cases takes the full height of its container */
+  width: 80%;
+  margin: auto; 
+  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 5rem;
+
 }
 
 @media (max-width: 575px) {
@@ -696,43 +700,41 @@ hr.style-one {
 }
 
 hr {
-  width: 100%; /* Use 100% to make it relative to #use-cases width */
+  width: 100%;
 }
 
 .contact-items {
   display: flex;
-  justify-content: center; /* Add this to center flex items when they wrap */
+  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
-  width: 100%; /* Make it fill the #use-cases width */
-  
+  align-items: stretch; /* Changed from center to stretch to make sure all items stretch equally */
+  width: 100%;
 }
 
-  
-.contact-item { /* Keep the existing styles */
+.contact-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Ensures that the content is spread out */
   align-items: center;
-  /* width: 28%; */
   margin: 30px;
   padding: 35px 15px;
   border-radius: 15px;
   text-align: left;
   min-width: 250px;
-  height: 250px;
   box-shadow: 0 15px 15px gray;
   background-color: #3498db;
   color: white;
   border: 1px solid gray;
-  width: calc((80% / 3) - 40px); /* Adjust the width to 80% divided by the number of items per row minus the margins */
-  margin: 40px; /* Adjust the margin to ensure the total width is correct */
-
+  width: calc((80% / 3) - 60px); /* Adjusted to account for margin */
+  margin: 20px; /* Uniform margin for cleaner spacing */
+  height: auto; /* Initially auto to adjust to content */
+  flex: 1 1 auto; /* Flex grow, flex shrink and flex basis set to auto */
 }
+
 p {
   font-size: 15px;
 }
 
-/* Set the text style of the block heading to bold and include a small amount of margin between the heading and the description */
 .contact-item h3 {
   font-weight: bold;
   margin: 5px 0;
@@ -742,6 +744,15 @@ p {
   text-align: left;
 }
 
+
+@media (min-width: 1400px) {
+  .contact-item {
+   max-width: 200px;
+  }
+
+  
+  
+}
 
 
 
@@ -790,6 +801,8 @@ p {
   line-height: 1;
   font-weight: 700;
   letter-spacing: 1px;
+  text-align: left;
+  width: 100%;
   color: #222222;
 }
 
@@ -841,14 +854,14 @@ p {
   line-height: 28px;
   font-size: 14px;
 }
-
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
-  background: #ed3c0d;
+  color: transparent;
+  background: white;
   text-align: left;
   padding: 15px;
   font-weight: 600;
+  height: 0px;
 }
 
 .contact .php-email-form .error-message br+br {
@@ -859,9 +872,10 @@ p {
   display: none;
   color: #fff;
   background: #18d26e;
-  text-align: center;
   padding: 15px;
+  text-align: center;
   font-weight: 600;
+  height: auto;
 }
 
 .contact .php-email-form .loading {

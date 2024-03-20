@@ -1574,11 +1574,12 @@ section {
 
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
+  color: transparent;
   background: white;
   text-align: left;
   padding: 15px;
   font-weight: 600;
+  height: 0px;
 }
 
 .contact .php-email-form .error-message br+br {
@@ -1589,9 +1590,10 @@ section {
   display: none;
   color: #fff;
   background: #18d26e;
-  text-align: center;
   padding: 15px;
+  text-align: center;
   font-weight: 600;
+  height: auto;
 }
 
 .contact .php-email-form .loading {

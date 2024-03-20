@@ -943,37 +943,61 @@ body {
 
 
 
+/* Do you need AI */
 
 
-/* Where We Sit */
-
-
-#where-we-sit-section-title {
-  padding-bottom: 0px
+/* Base styles */
+#do-you-need-ai-section-title {
+  padding-bottom: 0px;
 }
 
-#where-we-sit-img {
-  height: 100%;
+#do-you-need-ai-img {
+  height: auto; /* Change this as needed */
   width: 65%;
 }
 
-
-#where-we-sit-explanation {
-  margin-top: 2.5%;
-  width: 70%;
-  text-align: left;
-  /* background-color: lightgreen; */
-  /* Wrap text */
-  flex-wrap: wrap;
+#do-you-need-ai-explanation {
+  margin-top: 2.5rem;
+  width: 100%;
   display: flex;
-  justify-content: center
-  ;
+  justify-content: center;
 }
 
-/* .where-we-sit-explanation-paragraph {
-  display: flex;
-  justify-content: left;
-} */
+.do-you-need-ai-explanation-paragraph {
+  margin-top: 2rem;
+  width: 80%
+}
+
+
+@media (max-width: 1199px) {
+  /* Adjust width for large screens */
+  #do-you-need-ai-explanation {
+    width: 70%;
+  }
+}
+
+@media (max-width: 575px) {
+  /* Adjust width for phones */
+  #do-you-need-ai-explanation {
+    width: 100%;
+  }
+
+  #do-you-need-ai-img {
+    width: 80%;
+  }
+
+  .do-you-need-ai-explanation-paragraph {
+    width: 95%;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .do-you-need-ai-explanation-paragraph {
+    max-width: 1320px;
+  }
+}
+
 
 
 
@@ -1140,14 +1164,14 @@ body {
   line-height: 28px;
   font-size: 14px;
 }
-
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
-  background: #ed3c0d;
+  color: transparent;
+  background: white;
   text-align: left;
   padding: 15px;
   font-weight: 600;
+  height: 0px;
 }
 
 .contact .php-email-form .error-message br+br {
@@ -1158,9 +1182,10 @@ body {
   display: none;
   color: #fff;
   background: #18d26e;
-  text-align: center;
   padding: 15px;
+  text-align: center;
   font-weight: 600;
+  height: auto;
 }
 
 .contact .php-email-form .loading {
