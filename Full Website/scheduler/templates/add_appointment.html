@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Appointment</title>
+</head>
+
+<body>
+    <h1>Add New Appointment</h1>
+    <form action="/add_appointment" method="post">
+        Client Name: <input type="text" name="client_name" required><br>
+        Client Email: <input type="email" name="client_email" required><br>
+        Appointment Time: <input type="text" name="appointment_time" placeholder="e.g. 2pm-3pm" required><br>
+        <input type="submit" value="Add">
+    </form>
+    <br>
+    <a href="/">Back to Appointments</a>
+</body>
+
+</html>

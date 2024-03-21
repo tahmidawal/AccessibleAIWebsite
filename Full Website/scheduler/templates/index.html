@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Appointments</title>
+</head>
+
+<body>
+    <h1>Appointments</h1>
+    <a href="/add_appointment">Add new appointment</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Client Name</th>
+                <th>Client Email</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment.client_name }}</td>
+                <td>{{ appointment.client_email }}</td>
+                <td>{{ appointment.appointment_time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

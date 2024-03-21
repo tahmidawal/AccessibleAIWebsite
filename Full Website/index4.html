@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            color: black;
+        }
+
+        header img {
+            height: 40px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            margin: 0 0.5rem;
+            color: black;
+            text-decoration: none;
+        }
+
+        /* ... (the rest of your CSS styles) ... */
+
+        nav a:hover,
+        .sidebar a:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+        .sidebar {
+            height: calc(100vh - 40px - 2rem);
+            /* 2rem is the sum of top and bottom padding of header */
+            width: 250px;
+            background-color: white;
+            color: black;
+            position: absolute;
+            top: 0;
+            left: -200px;
+            top: 0 0.5rem;
+            top: calc(40px + 2rem);
+            /* Hidden by default */
+            transition: left 0.5s;
+            padding: 1rem;
+        }
+
+        .sidebar.show {
+            left: 0;
+        }
+
+
+        .sidebar a {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: black;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #sidebarToggle {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            /* Vertically center the button */
+            background-color: white;
+            color: black;
+            padding: 10px;
+            /* Adjust as necessary */
+            cursor: pointer;
+            font-size: 1.5rem;
+            /* Adjust font size if necessary */
+            z-index: 10;
+            /* This ensures the button appears above other elements */
+            border-top-right-radius: 8px;
+            /* Optional: adds some rounded corners */
+            border-bottom-right-radius: 8px;
+            /* Optional: adds some rounded corners */
+        }
+
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                /* Hide navbar on small screens */
+            }
+
+            .sidebar {
+                left: 0;
+                /* Show sidebar on small screens */
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            /* center the content; */
+            text-align: center;
+            width: max-content;
+        }
+
+
+
+        @media (min-width: 550px) {
+            .navbar {
+                all: unset;
+                display: block;
+            }
+
+            .navbar ul {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .navbar ul a {
+                font-size: inherit;
+            }
+
+            .close-nav,
+            .menu-bar {
+                display: none;
+            }
+        }
+
+        .workflow-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1000px;
+            padding: 20px;
+        }
+
+        .workflow-images {
+            width: 75fr;
+            display: flex;
+            /* Use flexbox for this container */
+            flex-wrap: wrap;
+            /* Allow the items to wrap to the next line when necessary */
+            gap: 50px;
+            /* Introduce 50px of space between items */
+            justify-content: center;
+            /* Horizontally center the items */
+            align-items: center;
+            /* Vertically center the items (this will be more apparent if there's a height set for the container) */
+        }
+
+        .workflow-images img {
+            width: 150px;
+            /* Specify the width */
+            height: 150px;
+            /* Specify the height to ensure they're square */
+            object-fit: cover;
+            /* Ensures the content is sized to maintain its aspect ratio while filling the image's entire container */
+            border-radius: 50%;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+
+        .workflow-images img:hover {
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2),
+                0 6px 10px -5px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease-in-out;
+            /* For smooth transition */
+        }
+
+
+        .image-container {
+            text-align: center;
+            /* To center the text underneath the image */
+            width: 150px;
+            /* Ensures the container has the same width as the image, so the text is centered correctly */
+        }
+
+        .image-container p {
+            margin-top: 10px;
+            /* Spacing between the image and the text */
+            font-size: 14px;
+            /* Adjust size as needed */
+        }
+
+        .card {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            align-self: center;
+            width: 65%;
+            height: auto;
+            /* Allow the card to grow based on content */
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            /* Padding inside the card */
+            box-shadow: inset 0 1px 1rem rgba(0, 0, 0, 0.05),
+                0 0 0 2px rgba(190, 190, 190, 0.2),
+                0.3em 0.3em 1em rgba(0, 0, 0, 0.2);
+            text-align: center;
+            /* Center the text and elements within the card */
+        }
+
+        .request-demo h2 {
+            margin-bottom: 20px;
+            /* Space between the text and the button */
+            font-size: 1.25em;
+            /* Adjust size as necessary */
+        }
+
+        .card p {
+            width: 50ch;
+        }
+
+
+        .demo-button {
+            text-decoration: none;
+            margin-bottom: 15px;
+            background: #5E5DF0;
+            border-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+        }
+
+        .demo-button:hover {
+            text-decoration: underline;
+            /* transition-delay: 0.2s; */
+            background-color: lightblue;
+        }
+
+        /* Google Font Import - Poppins */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            /* ===== Colors ===== */
+            --body-color: #e4e9f7;
+            --sidebar-color: #fff;
+            --primary-color: #695cfe;
+            --primary-color-light: #f6f5ff;
+            --toggle-color: #ddd;
+            --text-color: #707070;
+
+            /* ====== Transition ====== */
+            --tran-03: all 0.2s ease;
+            --tran-03: all 0.3s ease;
+            --tran-04: all 0.3s ease;
+            --tran-05: all 0.3s ease;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: var(--body-color);
+            transition: var(--tran-05);
+        }
+
+        ::selection {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        body.dark {
+            --body-color: #18191a;
+            --sidebar-color: #242526;
+            --primary-color: #3a3b3c;
+            --primary-color-light: #3a3b3c;
+            --toggle-color: #fff;
+            --text-color: #ccc;
+        }
+
+
+        .hidden {
+            opacity: 0;
+            transition: all 1s;
+        }
+
+        /* https://www.youtube.com/watch?si=5RwS2Pz3S5Z_WMUf&v=T33NN_pPeNI&feature=youtu.be&themeRefresh=1
+        @media(prefers-reduced-motion: reduce) {
+            .hidden {
+                transition: none;
+            }
+        } */
+
+        .show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <img src="images/AAI.png" alt="Your Logo">
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Resources</a>
+            <a href="#">Blog</a>
+            <a href="#">Hello</a>
+        </nav>
+        <button id="sidebarToggle" class="sidebar-toggle">></button>
+
+    </header>
+
+    <aside class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Revenue</a>
+        <a href="#">Notifications</a>
+        <a href="#">Analytics</a>
+        <a href="#">Wallets</a>
+        <a href="#">Dark Mode</a>
+    </aside>
+
+    <div class="container">
+        <h1>Data Analysis Should Be Easy Accessible.Ai Makes That Possible</h1>
+    </div>
+    <div class="workflow-images">
+        <div class="image-container hidden image-one">
+            <img src="images/Upload.png" alt="https:makeaccessible.ai">
+            <p>Upload your data</p>
+        </div>
+        <div class="image-container hidden image-two">
+            <img src="images/select.png" alt="https:makeaccessible.ai">
+            <p>Select parameters</p> <!-- Sample text, change as needed -->
+        </div>
+        <div class="image-container hidden image-three">
+            <img src="images/wait.png" alt="https:makeaccessible.ai">
+            <p>Wait for processing</p> <!-- Sample text, change as needed -->
+        </div>
+        <div class="image-container hidden image-four">
+            <img src="images/predict.png" alt="https:makeaccessible.ai">
+            <p>Receive predictions</p> <!-- Sample text, change as needed -->
+        </div>
+        <div class="image-container hidden image-five">
+            <img src="images/smile.png" alt="https:makeaccessible.ai">
+            <p>Smile at results</p> <!-- Sample text, change as needed -->
+        </div>
+    </div>
+    <div class="card shadow">
+        <div class="request-demo">
+            <h2>We are currently requesting a small number of beta testers. If you are interested in being a beta
+                tester, please fill out the form below.</h2>
+            <a class="demo-button" href="https://www.google.com">Request Demo</a>
+        </div>
+    </div>
+
+    <script defer src="app.js"></script>
+
+</body>
+
+</html>
